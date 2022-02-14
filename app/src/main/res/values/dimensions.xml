@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+        <dimen name="image_profile_width">@dimen/_40sdp</dimen>
+        <dimen name="image_profile_height">@dimen/_40sdp</dimen>
+
+        <dimen name="image_profile_mid_width">@dimen/_50sdp</dimen>
+        <dimen name="image_profile_mid_height">@dimen/_50sdp</dimen>
+
+
+        <dimen name="backgroundImage_width">@dimen/_250sdp</dimen>
+        <dimen name="backgroundImage_height">@dimen/_150sdp</dimen>
+
+</resources>

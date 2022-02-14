@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Basic Banking App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="success">SUCCESS</string>
+    <string name="you_have_transfer_money_successfully">You have transfer money successfully</string>
+    <string name="user_detail_amount">1000$</string>
+    <string name="user_detail_email">khalidmohamed@gmail.com</string>
+    <string name="user_detail_name">%s</string>
+    <string name="transaction">Transaction</string>
+    <string name="transactions">Last Transactions</string>
+    <string name="user_detail_button_text">make transaction</string>
+    <string name="user_transfer_from_title">Trasnfer From</string>
+    <string name="user_transfer_to_title">Trasnfer To</string>
+    <string name="user_transfer_amount">Amount Send</string>
+    <string name="user_transfer_button_text">submit</string>
+    <string name="user_transfer_amount_hint">0.0$</string>
+    <string name="bank_feedback_user1">I’ve been with (BN) for a few years, and every single encounter w them has been exceptional despite my comparatively small-status among businesses they likely serve.</string>
+    <string name="bank_feedback_user2">Have been using (BN) sense I was 16 years old. Wonderful staff and fast technology with them. If I had a problem, they fix it right away. I’m loving (BN) and I plan on sticking with them for life. Good Job guys</string>
+    <string name="bank_feedback_user3">(BN) staff members are AWESOME in every way, every time. The only regret I have with (BN) is that I did not move my accounts here years earlier</string>
+    <string name="bank_name_user1">Khalid Elfaki</string>
+    <string name="bank_name_user2">Tessa Verity</string>
+    <string name="bank_name_user3">Jaxson Jezza</string>
+    <string name="bank_customers">Bank Customers</string>
+    <string name="welcome_to_bank">welcome to the x-bank</string>
+    <string name="show_all_customer_btn">Show All Customer</string>
+    <string name="remove_number"><![CDATA[<]]></string>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.app.com/apk/res/app">
+
+    <font app:font="@font/montserrat_alternates_thin"
+          app:fontWeight="100"
+          app:fontStyle="normal"
+        />
+
+    <font app:font="@font/montserrat_alternates_light"
+          app:fontWeight="300"
+          app:fontStyle="normal"/>
+
+    <font app:font="@font/montserrat_alternates_semibold"
+          app:fontWeight="600"
+          app:fontStyle="normal"/>
+
+    <font app:font="@font/montserrat_alternates_bold"
+        app:fontWeight="700"
+        app:fontStyle="normal"/>
+
+    <font app:font="@font/montserrat_alternates_black"
+         app:fontWeight="900"
+         app:fontStyle="normal"/>
+
+</font-family>

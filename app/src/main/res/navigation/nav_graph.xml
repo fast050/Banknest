@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/customerListFragment"
+        android:name="com.example.basicbankingapp.ui.ListCustomerFragment"
+        android:label="Bank Customers"
+        tools:layout="@layout/fragment_list_customer">
+        <action
+            android:id="@+id/action_customerListFragment_to_userDetailFragment3"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.example.basicbankingapp.ui.UserDetailFragment"
+        android:label="Customer account"
+        tools:layout="@layout/fragment_user_detail">
+        <action
+            android:id="@+id/action_userDetailFragment_to_userTransferFragment"
+            app:destination="@id/userTransferFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.basicbankingapp.model.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTransferFragment"
+        android:name="com.example.basicbankingapp.ui.UserTransferFragment"
+        android:label="@string/transaction"
+        tools:layout="@layout/fragment_user_transfer">
+        <action
+            android:id="@+id/action_userTransferFragment_to_successfullScreenFragment"
+            app:destination="@id/successfullScreenFragment" />
+        <argument
+            android:name="userTransferFrom"
+            app:argType="com.example.basicbankingapp.model.User" />
+        <argument
+            android:name="userTransferTo"
+            app:argType="com.example.basicbankingapp.model.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/successfullScreenFragment"
+        android:name="com.example.basicbankingapp.ui.SuccessfulScreenFragment"
+        tools:layout="@layout/fragment_successfull_screen">
+        <action
+            android:id="@+id/action_successfullScreenFragment_to_customerListFragment"
+            app:destination="@id/customerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.basicbankingapp.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_customerListFragment3"
+            app:destination="@id/customerListFragment" />
+    </fragment>
+</navigation>

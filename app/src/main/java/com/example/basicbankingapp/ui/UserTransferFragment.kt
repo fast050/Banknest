@@ -90,7 +90,9 @@ class UserTransferFragment : Fragment() {
                 val userTransferMoneyInput = editTransactionSend.text.toString()
                 val isValid= isValidAmount(args.userTransferFrom.userCurrentBalance,userTransferMoneyInput.toDouble())
 
-                if (userTransferMoneyInput.isNotEmpty() && userTransferMoneyInput != "0.0$" ) {
+                Log.d(TAG, "onViewCreated: $userTransferMoneyInput  //   $isValid")
+
+                if (userTransferMoneyInput.isNotEmpty() && userTransferMoneyInput != "0.0$" && isValid) {
 
 
 
@@ -127,9 +129,13 @@ class UserTransferFragment : Fragment() {
                     )
 
                     findNavController().navigate(R.id.action_userTransferFragment_to_successfullScreenFragment)
-                } else
-                    Snackbar.make(binding.root, "enter the amount", Snackbar.LENGTH_SHORT).show()
+                } else {
 
+                    if (!isValid)
+                        Snackbar.make(binding.root, "The Send Amount larger than your Bank Balance", Snackbar.LENGTH_LONG).show()
+                    else
+                    Snackbar.make(binding.root, "enter the amount", Snackbar.LENGTH_SHORT).show()
+                }
             }
         }
 

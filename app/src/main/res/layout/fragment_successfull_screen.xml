@@ -37,7 +37,7 @@
         android:foregroundGravity="center_vertical|clip_horizontal"
         android:lines="2"
         android:text="@string/you_have_transfer_money_successfully"
-        style="@style/AppTheme.TextAppearance.subTitle"
+        style="@style/Banknest.TextAppearance.subTitle"
         android:textColor="@color/white"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="@+id/textView7"

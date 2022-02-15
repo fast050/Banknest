@@ -14,7 +14,7 @@
 
         <TextView
             android:id="@+id/textView"
-            style="@style/AppTheme.TextAppearance.title"
+            style="@style/Banknest.TextAppearance.subTitle.dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -56,8 +56,8 @@
             android:layout_marginEnd="16dp"
             android:gravity="center"
             android:text="Select"
-            android:theme="@style/AppTheme"
-            style="@style/AppTheme.TextAppearance.title"
+            android:theme="@style/Banknest"
+            style="@style/Banknest.TextAppearance.subTitle.white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

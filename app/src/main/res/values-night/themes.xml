@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Banknest" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">#2B7A91</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
@@ -46,37 +46,37 @@
 
     </style>
 
-    <style name="AppTheme.TextAppearance.HeadLine" parent="AppTheme">
+    <style name="AppTheme.TextAppearance.HeadLine" parent="Banknest">
         <item name="android:textSize">24sp</item>
         <item name="android:fontFamily">@font/montserrat_alternates_black</item>
 
     </style>
 
-    <style name="AppTheme.TextAppearance.HeadLine.dark" parent="AppTheme">
+    <style name="AppTheme.TextAppearance.HeadLine.dark" parent="Banknest">
         <item name="android:textSize">24sp</item>
         <item name="android:fontFamily">@font/montserrat_alternates_black</item>
         <item name="android:textColor">#ECE6E6</item>
 
     </style>
 
-    <style name="AppTheme.TextAppearance.title" parent="AppTheme">
+    <style name="Banknest.TextAppearance.title" parent="Banknest">
         <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
         <item name="android:textSize">18sp</item>
     </style>
-    <style name="AppTheme.TextAppearance.title.dark" parent="AppTheme">
+    <style name="AppTheme.TextAppearance.title.dark" parent="Banknest">
         <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">#ECE6E6</item>
 
     </style>
 
-    <style name="AppTheme.TextAppearance.subTitle" parent="AppTheme">
+    <style name="Banknest.TextAppearance.subTitle" parent="Banknest">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">@font/montserrat_alternates_bold</item>
         <item name="android:textColor">#D5CECE</item>
     </style>
 
-    <style name="AppTheme.TextAppearance.subTitle.dark" parent="AppTheme">
+    <style name="AppTheme.TextAppearance.subTitle.dark" parent="Banknest">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">@font/montserrat_alternates_bold</item>
         <item name="android:textColor">#ECE6E6</item>

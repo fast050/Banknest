@@ -41,17 +41,17 @@
 
         <TextView
             android:id="@+id/user_Name"
+            style="@style/Banknest.TextAppearance.subTitle.dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="TextView"
-            style="@style/Banknest.TextAppearance.title"
             app:layout_constraintStart_toEndOf="@+id/user_Image"
             app:layout_constraintTop_toTopOf="@+id/user_Image" />
 
         <TextView
             android:id="@+id/user_transfer_time"
-            style="@style/Banknest.TextAppearance.subTitle"
+            style="@style/Banknest.TextAppearance.body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -66,6 +66,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_alternates_black"
             android:text="$ 10.0000"
+            android:textSize="@dimen/_16ssp"
             app:layout_constraintBottom_toBottomOf="@+id/user_Image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/user_Image" />

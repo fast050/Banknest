@@ -37,5 +37,5 @@ fun String.formatMoneyTransaction(transactionType: String): String {
 
 fun isValidAmount(userCurrentAmount:Double,userInputAmount:Double):Boolean
 {
-    return userCurrentAmount<=userInputAmount
+    return userCurrentAmount>userInputAmount
 }

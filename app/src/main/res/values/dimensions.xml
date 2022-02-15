@@ -12,4 +12,11 @@
         <dimen name="backgroundImage_width">@dimen/_250sdp</dimen>
         <dimen name="backgroundImage_height">@dimen/_150sdp</dimen>
 
+        <dimen name="backgroundImage_small_width">@dimen/_200sdp</dimen>
+        <dimen name="backgroundImage_small_height">@dimen/_200sdp</dimen>
+
+
+        <dimen name="buttonDigit_width">@dimen/_45sdp</dimen>
+        <dimen name="buttonDigit_height">@dimen/_50sdp</dimen>
+
 </resources>

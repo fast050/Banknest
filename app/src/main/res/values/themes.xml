@@ -15,7 +15,7 @@
 
     </style>
 
-    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Banknest" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_light_primary</item>
         <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
@@ -51,42 +51,80 @@
 
 
     <!--Typography-->
-    <style name="AppTheme.TextAppearance.headLine" parent="AppTheme">
+    <style name="Banknest.TextAppearance.headLine" parent="Banknest">
         <item name="android:fontFamily">@font/montserrat_alternates_bold</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineMedium</item>
         <item name="android:textSize">@dimen/_24ssp</item>
     </style>
 
-    <style name="AppTheme.TextAppearance.title" parent="AppTheme">
+
+
+    <style name="Banknest.TextAppearance.headLine.white" parent="Banknest">
+        <item name="android:fontFamily">@font/montserrat_alternates_bold</item>
+        <item name="android:theme">@style/Theme.Material3.Dark</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineMedium</item>
+        <item name="android:textSize">@dimen/_24ssp</item>
+    </style>
+    <style name="Banknest.TextAppearance.title" parent="Banknest">
         <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
         <item name="android:textSize">@dimen/_18ssp</item>
-        android:textSize="@dimen/_20ssp"
-
+        <item name="android:textColor">#201F1F</item>
     </style>
-    <style name="AppTheme.TextAppearance.title.large" parent="AppTheme">
+    <style name="Banknest.TextAppearance.title.large" parent="Banknest">
         <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
         <item name="android:textSize">@dimen/_20ssp</item>
 
     </style>
 
-    <style name="AppTheme.TextAppearance.subTitle" parent="AppTheme">
-        <item name="android:fontFamily">@font/montserrat_alternates_bold</item>
+    <style name="Banknest.TextAppearance.subTitle.dark" parent="Banknest">
+        <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
+        <item name="android:textColor">#201F1F</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+    </style>
+
+    <style name="Banknest.TextAppearance.subTitle" parent="Banknest">
+        <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
         <item name="android:textColor">#A19F9F</item>
         <item name="android:textSize">@dimen/_14ssp</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
     </style>
 
-    <style name="AppTheme.TextAppearance.body" parent="AppTheme">
-        <item name="android:fontFamily">@font/montserrat_alternates_bold</item>
+    Banknest.TextAppearance.subTitle.white
+    <style name="Banknest.TextAppearance.subTitle.white" parent="Banknest">
+        <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
+        <item name="theme">@style/Theme.Material3.Dark</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+    </style>
+
+    <style name="Banknest.TextAppearance.Button.subTitle.white" parent="Banknest">
+        <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
+    </style>
+
+
+    <style name="Banknest.TextAppearance.body" parent="Banknest">
+        <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
         <item name="android:textColor">#A19F9F</item>
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.BodySmall</item>
     </style>
 
-    <style name="AppTheme.TextAppearance.body.small" parent="AppTheme">
-        <item name="android:fontFamily">@font/montserrat_alternates_bold</item>
+    <style name="Banknest.TextAppearance.body.white" parent="Banknest">
+        <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
+        <item name="android:textColor">#EAE7E7</item>
+
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodySmall</item>
+    </style>
+
+
+    <style name="Banknest.TextAppearance.body.small" parent="Banknest">
+        <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
         <item name="android:textColor">#A19F9F</item>
         <item name="android:textSize">@dimen/_10ssp</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.BodySmall</item>
@@ -98,6 +136,9 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="Banknest.Toolbar.material3" parent="Base.Theme.Material3.Dark">
+        <item name="android:fontFamily">@font/montserrat_alternates_black</item>
+    </style>
 
 
 

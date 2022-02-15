@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/user_Name"
-            style="@style/Banknest.TextAppearance.title"
+            style="@style/Banknest.TextAppearance.subTitle.dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
 
         <TextView
             android:id="@+id/user_Amount"
-            style="@style/Banknest.TextAppearance.subTitle"
+            style="@style/Banknest.TextAppearance.body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$ 100.00"
@@ -63,7 +63,7 @@
 
         <TextView
             android:id="@+id/textView9"
-            style="@style/Banknest.TextAppearance.body"
+            style="@style/Banknest.TextAppearance.body.small"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"

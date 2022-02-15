@@ -37,21 +37,28 @@
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-hdpi/user_item_transaction.xml" value="0.16944444444444445" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-large/activity_main.xml" value="0.190625" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-mdpi/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-mdpi/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-mdpi/user_item.xml" value="0.264" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-mdpi/user_item_transaction.xml" value="0.19722222222222222" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-mdpi/user_selection_item.xml" value="0.2" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-normal/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-small-mdpi/fragment_home.xml" value="0.6" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-w480dp/user_item.xml" value="0.264" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-xhdpi/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout-xxhdpi/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/activity_main.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/activity_splash.xml" value="0.176" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_customer_list.xml" value="0.264" />
-        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_home.xml" value="0.8800000000000001" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_list_customer.xml" value="0.152" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_successfull_screen.xml" value="0.4" />
-        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_user_detail.xml" value="0.12" />
-        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_user_transfer.xml" value="0.2012927054478301" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_user_detail.xml" value="0.2" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/fragment_user_transfer.xml" value="0.176" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/pick_transfer_user_item.xml" value="0.25" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/test_laoyt2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/test_layout.xml" value="0.264" />
-        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/user_item.xml" value="0.2" />
-        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/user_item_transaction.xml" value="0.176" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/user_item.xml" value="0.4089068825910931" />
+        <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/user_item_transaction.xml" value="0.2" />
         <entry key="..\:/Users/Mr ahmed/AndroidStudioProjects/BasicBankingApp/app/src/main/res/layout/user_selection_item.xml" value="0.4" />
       </map>
     </option>

@@ -13,255 +13,265 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.UserTransferFragment">
-
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        tools:context=".ui.UserTransferFragment">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/user_transfer_to_profile_image"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/male_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_transfer_to_profile_image"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:src="@drawable/male_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-    <TextView
-        android:id="@+id/user_transfer_to_header"
-        style="@style/AppTheme.TextAppearance.HeadLine"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="@string/user_transfer_to_title"
-        android:textColor="#ECE6E6"
-        app:layout_constraintBottom_toTopOf="@+id/user_transfer_to_profile_image"
-        app:layout_constraintEnd_toEndOf="@+id/user_transfer_to_profile_image"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/user_transfer_to_profile_image" />
+        <TextView
+            android:id="@+id/user_transfer_to_header"
+            style="@style/Banknest.TextAppearance.subTitle.white"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/grid_1"
+            android:text="@string/user_transfer_to_title"
+            app:layout_constraintBottom_toTopOf="@+id/user_transfer_to_profile_image"
+            app:layout_constraintEnd_toEndOf="@+id/user_transfer_to_profile_image"
+            app:layout_constraintHorizontal_bias="0.537"
+            app:layout_constraintStart_toStartOf="@+id/user_transfer_to_profile_image" />
 
-    <EditText
-        android:focusableInTouchMode="false"
-        android:id="@+id/edit_transaction_send"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:hint="@string/user_transfer_amount_hint"
-        android:inputType="text|numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/user_transfer_to_profile_image"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="@+id/user_transfer_to_profile_image"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        <EditText
+            android:id="@+id/edit_transaction_send"
+            style="@style/Banknest.TextAppearance.body.white"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusableInTouchMode="false"
+            android:gravity="center_horizontal"
+            android:hint="@string/user_transfer_amount_hint"
+            android:inputType="text|numberDecimal"
+            android:textColorHint="#8C8A8A"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="@+id/user_transfer_to_profile_image"
+            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintStart_toStartOf="@+id/user_transfer_to_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <Button
-        android:id="@+id/submitBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/user_transfer_button_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn0" />
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/grid_2"
+            android:layout_marginTop="@dimen/grid_2"
+            android:layout_marginEnd="@dimen/grid_2"
+            android:text="@string/user_transfer_button_text"
+            android:textAppearance="@style/Banknest.TextAppearance.subTitle.white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn0" />
 
-    <TextView
-        android:id="@+id/textView6"
-        style="@style/AppTheme.TextAppearance.title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/user_transfer_amount"
-        android:textColor="#ECE6E6"
-        app:layout_constraintEnd_toEndOf="@+id/edit_transaction_send"
-        app:layout_constraintStart_toStartOf="@+id/edit_transaction_send"
-        app:layout_constraintTop_toBottomOf="@+id/user_trasfer_to_name" />
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/Banknest.TextAppearance.body.white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:text="@string/user_transfer_amount"
+            app:layout_constraintEnd_toEndOf="@+id/edit_transaction_send"
+            app:layout_constraintStart_toStartOf="@+id/edit_transaction_send"
+            app:layout_constraintTop_toBottomOf="@+id/user_trasfer_to_name" />
 
-    <TextView
-        android:id="@+id/user_trasfer_to_name"
-        style="@style/AppTheme.TextAppearance.title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ECE6E6"
-        app:layout_constraintEnd_toEndOf="@+id/user_transfer_to_profile_image"
-        app:layout_constraintStart_toStartOf="@+id/user_transfer_to_profile_image"
-        app:layout_constraintTop_toBottomOf="@+id/user_transfer_to_profile_image"
-        tools:text="john peter" />
+        <TextView
+            android:id="@+id/user_trasfer_to_name"
+            style="@style/Banknest.TextAppearance.title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ECE6E6"
+            app:layout_constraintEnd_toEndOf="@+id/user_transfer_to_profile_image"
+            app:layout_constraintStart_toStartOf="@+id/user_transfer_to_profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/user_transfer_to_profile_image"
+            tools:text="john peter" />
 
-    <Button
-        android:id="@+id/btn8"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:foregroundGravity="center"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        android:gravity="center"
-        android:text="8"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn9"
-        app:layout_constraintEnd_toStartOf="@+id/btn9"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn7" />
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="8"
+            app:layout_constraintEnd_toStartOf="@+id/btn9"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintStart_toEndOf="@+id/btn7"
+            app:layout_constraintTop_toBottomOf="@+id/btn5" />
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="16dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        android:text="1"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn2"
-        app:layout_constraintEnd_toStartOf="@+id/btn2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="@+id/edit_transaction_send" />
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="@+id/btn2"
+            app:layout_constraintEnd_toStartOf="@+id/btn2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn2"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btn9"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="9"
-        app:layout_constraintEnd_toEndOf="@+id/btn6"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        app:layout_constraintStart_toEndOf="@+id/btn8"
-        app:layout_constraintTop_toBottomOf="@+id/btn6" />
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="9"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn8"
+            app:layout_constraintTop_toBottomOf="@+id/btn6" />
 
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        android:text="3"
-        app:layout_constraintEnd_toEndOf="@+id/edit_transaction_send"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn2"
-        app:layout_constraintTop_toBottomOf="@+id/edit_transaction_send" />
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn2" />
 
-    <Button
-        android:id="@+id/btn7"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="16dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        android:text="7"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn8"
-        app:layout_constraintEnd_toStartOf="@+id/btn8"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="@+id/btn4" />
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="7"
+            app:layout_constraintEnd_toStartOf="@+id/btn8"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn4" />
 
-    <Button
-        android:id="@+id/btn4"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="16dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="4"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn5"
-        app:layout_constraintEnd_toStartOf="@+id/btn5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="@+id/btn1" />
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="4"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toStartOf="@+id/btn5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn1" />
 
-    <Button
-        android:id="@+id/btn5"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="5"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn6"
-        app:layout_constraintEnd_toStartOf="@+id/btn6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn4" />
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="5"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toStartOf="@+id/btn6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn4"
+            app:layout_constraintTop_toBottomOf="@+id/btn2" />
 
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="2"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn3"
-        app:layout_constraintEnd_toStartOf="@+id/btn3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn1" />
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="2"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toStartOf="@+id/btn3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn1"
+            app:layout_constraintTop_toBottomOf="@+id/edit_transaction_send" />
 
-    <Button
-        android:id="@+id/btn6"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:foregroundGravity="center"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        android:gravity="center"
-        android:text="6"
-        app:layout_constraintEnd_toEndOf="@+id/btn3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn5"
-        app:layout_constraintTop_toBottomOf="@+id/btn3" />
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="6"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn5"
+            app:layout_constraintTop_toBottomOf="@+id/btn3" />
 
-    <Button
-        android:id="@+id/btn0"
-        android:layout_width="57dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:text="0"
-        android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
-        app:layout_constraintEnd_toEndOf="@+id/btn9"
-        app:layout_constraintStart_toStartOf="@+id/btn7"
-        app:layout_constraintTop_toBottomOf="@+id/btn8" />
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:onClick="@{(view)->userTransferFragment.enterDigit(view)}"
+            android:text="0"
+            app:layout_constraintEnd_toEndOf="@+id/btn9"
+            app:layout_constraintStart_toStartOf="@+id/btn7"
+            app:layout_constraintTop_toBottomOf="@+id/btn8" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="@string/remove_number"
-        android:onClick="@{()->userTransferFragment.removeAmount()}"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn0"
-        app:layout_constraintStart_toStartOf="@+id/btn7" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:onClick="@{()->userTransferFragment.removeAmount()}"
+            android:text="@string/remove_number"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn0"
+            app:layout_constraintEnd_toStartOf="@+id/btn0"
+            app:layout_constraintTop_toTopOf="@+id/btn0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 
 </layout>

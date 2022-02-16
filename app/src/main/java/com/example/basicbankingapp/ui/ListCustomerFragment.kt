@@ -58,6 +58,7 @@ class ListCustomerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //hide the toolbar image , and show the toolbar
         requireActivity().findViewById<AppBarLayout>(R.id.appBarLayout2).visibility = View.VISIBLE
         requireActivity().findViewById<CardView>(R.id.profile_image_container_toolbar).visibility =View.GONE
 

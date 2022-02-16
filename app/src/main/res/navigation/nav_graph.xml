@@ -12,8 +12,7 @@
         tools:layout="@layout/fragment_list_customer">
         <action
             android:id="@+id/action_customerListFragment_to_userDetailFragment3"
-            app:destination="@id/userDetailFragment"
-            app:enterAnim="@anim/from_right_aim" />
+            app:destination="@id/userDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/userDetailFragment"

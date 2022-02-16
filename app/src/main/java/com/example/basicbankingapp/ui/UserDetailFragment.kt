@@ -1,6 +1,7 @@
 package com.example.basicbankingapp.ui
 
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
+import androidx.core.view.ViewCompat
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.basicbankingapp.BankApplication
@@ -16,6 +20,7 @@ import com.example.basicbankingapp.R
 import com.example.basicbankingapp.data.DataProvider
 import com.example.basicbankingapp.databinding.FragmentUserDetailBinding
 import com.example.basicbankingapp.databinding.UserItemTransactionBinding
+import java.util.concurrent.TimeUnit
 
 class UserDetailFragment : Fragment() {
     private val args: UserDetailFragmentArgs by navArgs()
@@ -28,12 +33,21 @@ class UserDetailFragment : Fragment() {
 
     lateinit var bindingItem: UserItemTransactionBinding
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //-----------------------------------------
+        sharedElementEnterTransition =
+            TransitionInflater.from(context).inflateTransition(android.R.transition.move)
+        //postponeEnterTransition(250, TimeUnit.MILLISECONDS)
+        //-----------------------------------------
         _binding = FragmentUserDetailBinding.inflate(inflater, container, false)
         bindingItem = UserItemTransactionBinding.inflate(layoutInflater, container, false)
 
@@ -45,10 +59,12 @@ class UserDetailFragment : Fragment() {
 
         binding.apply {
 
+
+           // ViewCompat.setTransitionName(binding.detailScreen, "title_${args.user.userId}")
+
+
             userNameDetail.text = getString(R.string.user_detail_name,args.user.userName)
-            //userEmailDetail.text = args.user.userEmail
             userBalanceDetail.text = args.user.userCurrentBalance.formatMoneyAmount()
-            //.setImageResource(args.user.userProfilePicture)
 
             // set image at the toolbar
             requireActivity().findViewById<CardView>(R.id.profile_image_container_toolbar).visibility=View.VISIBLE
@@ -58,12 +74,18 @@ class UserDetailFragment : Fragment() {
 
 
             button.setOnClickListener {
-                findNavController().navigate(
-                    UserDetailFragmentDirections.actionUserDetailFragmentToUserTransferFragment(
+                val extras = FragmentNavigatorExtras(binding.button to "hero_image")
+
+             val directions =  UserDetailFragmentDirections.actionUserDetailFragmentToUserTransferFragment(
                         args.user,
                         DataProvider.listOfCostumer[9]
                     )
-                )
+
+
+                view.findNavController().navigate(
+                    directions, // NavOptions
+                    extras)
+
             }
         }
     }

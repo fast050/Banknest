@@ -1,8 +1,9 @@
 package com.example.basicbankingapp.ui
 
-import android.content.ContentValues.TAG
+ import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.util.Log
+ import android.transition.TransitionInflater
+ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +12,13 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.DialogFragment
+ import androidx.core.app.ActivityOptionsCompat
+ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
+ import androidx.navigation.ActivityNavigatorExtras
+ import androidx.navigation.findNavController
+ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,12 +40,23 @@ class UserTransferFragment : Fragment() {
     }
     private var _binding: FragmentUserTransferBinding? = null
     private val binding get() = _binding!!
-    val args: UserTransferFragmentArgs by navArgs()
+    private val args: UserTransferFragmentArgs by navArgs()
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val animation = TransitionInflater.from(requireContext()).inflateTransition(android.R.transition.move)
+        sharedElementEnterTransition =animation
+        sharedElementReturnTransition=animation
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         _binding = FragmentUserTransferBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -164,7 +179,6 @@ class UserTransferFragment : Fragment() {
     }
 
     private fun FragmentUserTransferBinding.setTransfersFromUser() {
-        // userTransferFromBalance.text =
         args.userTransferFrom.userCurrentBalance.formatMoneyAmount()
 
 
@@ -176,7 +190,6 @@ class UserTransferFragment : Fragment() {
     }
 
     private fun FragmentUserTransferBinding.setTransfersToUser(user: User) {
-        // userTransferToBalance.text = user.userCurrentBalance.formatMoneyAmount()
         userTrasferToName.text = user.userName
         userTransferToProfileImage.setImageResource(user.userProfilePicture)
     }

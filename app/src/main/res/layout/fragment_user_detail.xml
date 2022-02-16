@@ -6,11 +6,14 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/detailScreen"
+    android:transitionName="detailScreen"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:transitionName="child_support"
         tools:context=".ui.UserDetailFragment">
         <!-- Rectangle 1 -->
         <View
@@ -124,6 +127,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
+            android:transitionName="normal_image"
             android:text="Make Transaction"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

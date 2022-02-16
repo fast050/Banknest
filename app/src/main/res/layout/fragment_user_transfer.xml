@@ -16,6 +16,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:transitionName="hero_image"
         tools:context=".ui.UserTransferFragment">
 
 
@@ -64,7 +65,7 @@
         <EditText
             android:id="@+id/edit_transaction_send"
             style="@style/Banknest.TextAppearance.body.white"
-            android:layout_width="100dp"
+            android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:focusableInTouchMode="false"

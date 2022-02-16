@@ -47,8 +47,7 @@ class ListCustomerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        requireActivity().findViewById<AppBarLayout>(R.id.appBarLayout2).visibility = View.VISIBLE
-        requireActivity().findViewById<CardView>(R.id.profile_image_container_toolbar).visibility =View.GONE
+
         _binding = FragmentListCustomerBinding.inflate(inflater, container, false)
         //for animations
         sharedElementReturnTransition = TransitionInflater.from(requireContext()).inflateTransition(android.R.transition.move)
@@ -59,6 +58,8 @@ class ListCustomerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        requireActivity().findViewById<AppBarLayout>(R.id.appBarLayout2).visibility = View.VISIBLE
+        requireActivity().findViewById<CardView>(R.id.profile_image_container_toolbar).visibility =View.GONE
 
         binding.apply {
 

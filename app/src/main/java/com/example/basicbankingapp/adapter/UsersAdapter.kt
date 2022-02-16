@@ -39,6 +39,7 @@ class UsersAdapter(private val onClickListener: (User,CardView)->Unit) : ListAda
             binding.apply {
                 userName.text = user.userName
                 userAmount.text = user.userCurrentBalance.formatMoneyAmount()
+                userEmail.text=user.userEmail
                 userImage.setImageResource(user.userProfilePicture)
 
 

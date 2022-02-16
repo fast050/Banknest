@@ -2,6 +2,8 @@
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
 <ScrollView
 
     android:layout_width="match_parent"
@@ -17,46 +19,147 @@
         tools:context=".ui.UserDetailFragment">
         <!-- Rectangle 1 -->
         <View
-            android:visibility="gone"
             android:id="@+id/rectangle_1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_alignParentLeft="false"
             android:layout_alignParentTop="false"
             android:background="@drawable/background_rec_shape_color"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="354dp"
-            android:layout_height="194dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_card_visa"
+        <HorizontalScrollView
+            android:id="@+id/imageviewContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
             app:layout_constraintBottom_toTopOf="@+id/guideline4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+            app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/user_balance_detail"
-            style="@style/Banknest.TextAppearance.title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/user_detail_amount"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias=".15"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.60" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/_270sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_card_visa"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView2"
+                        style="@style/Banknest.TextAppearance.subTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Balance"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        app:layout_constraintStart_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/user_balance_detail"
+                        style="@style/Banknest.TextAppearance.title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_detail_amount"
+                        app:layout_constraintStart_toStartOf="@id/textView2"
+                        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_270sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_card_visa_background"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/title_email_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        style="@style/Banknest.TextAppearance.subTitle"
+                        app:layout_constraintTop_toTopOf="@id/imageView2"
+                        app:layout_constraintStart_toStartOf="@id/imageView2"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        />
+
+                    <TextView
+                        android:id="@+id/email_detail_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="khalidwork@gmail.com"
+                        style="@style/Banknest.TextAppearance.subTitle.dark"
+                        app:layout_constraintTop_toBottomOf="@id/title_email_layout"
+                        app:layout_constraintStart_toStartOf="@id/title_email_layout"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/title_number_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Banknest.TextAppearance.subTitle"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="Number"
+                        app:layout_constraintTop_toBottomOf="@id/email_detail_customer"
+                        app:layout_constraintStart_toStartOf="@id/email_detail_customer"
+                        />
+
+                    <TextView
+                        android:id="@+id/number_detail_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Banknest.TextAppearance.subTitle.dark"
+                        android:text="+971 15 125 1248"
+                        app:layout_constraintTop_toBottomOf="@id/title_number_layout"
+                        app:layout_constraintStart_toStartOf="@id/title_number_layout"
+                        />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+
 
         <View
             android:id="@+id/view2"
@@ -71,14 +174,14 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView5"
+            style="@style/Banknest.TextAppearance.subTitle.dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/transactions"
-            style="@style/Banknest.TextAppearance.subTitle.dark"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageviewContainer" />
 
         <include
             android:id="@+id/user_transaction_2"
@@ -121,14 +224,14 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="0dp"
             style="@style/Banknest.TextAppearance.Button.subTitle.white"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-            android:transitionName="normal_image"
             android:text="Make Transaction"
+            android:transitionName="normal_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -156,19 +259,6 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.43" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textView2"
-            style="@style/Banknest.TextAppearance.subTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Balance"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/user_balance_detail"
-            app:layout_constraintEnd_toEndOf="@+id/user_balance_detail"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/user_balance_detail"
-            app:layout_constraintTop_toTopOf="@+id/guideline2"
-            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/userNameDetail"
@@ -180,12 +270,11 @@
             android:text="TextView"
             android:textColor="#ECE6E6"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.305" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView4"

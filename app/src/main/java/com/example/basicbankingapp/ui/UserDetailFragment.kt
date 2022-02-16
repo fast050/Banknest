@@ -65,6 +65,8 @@ class UserDetailFragment : Fragment() {
 
             userNameDetail.text = getString(R.string.user_detail_name,args.user.userName)
             userBalanceDetail.text = args.user.userCurrentBalance.formatMoneyAmount()
+            numberDetailCustomer.text= args.user.userMobileNumber
+            emailDetailCustomer.text = args.user.userEmail
 
             // set image at the toolbar
             requireActivity().findViewById<CardView>(R.id.profile_image_container_toolbar).visibility=View.VISIBLE

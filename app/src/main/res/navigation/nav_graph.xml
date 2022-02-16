@@ -20,10 +20,7 @@
         android:label="Customer account"
         tools:layout="@layout/fragment_user_detail">
         <action
-            app:enterAnim="@anim/from_right_aim"
-            app:exitAnim="@anim/from_left_aim"
-            app:popEnterAnim="@anim/to_left_aim"
-            app:popExitAnim="@anim/to_right_aim"
+
             android:id="@+id/action_userDetailFragment_to_userTransferFragment"
             app:destination="@id/userTransferFragment"/>
         <argument
@@ -54,7 +51,10 @@
         android:name="com.example.basicbankingapp.ui.SuccessfulScreenFragment"
         tools:layout="@layout/fragment_successfull_screen">
         <action
-
+            app:enterAnim="@anim/from_right_aim"
+            app:exitAnim="@anim/from_left_aim"
+            app:popEnterAnim="@anim/to_left_aim"
+            app:popExitAnim="@anim/to_right_aim"
             android:id="@+id/action_successfullScreenFragment_to_customerListFragment"
             app:destination="@id/customerListFragment"
             app:popUpTo="@id/customerListFragment"

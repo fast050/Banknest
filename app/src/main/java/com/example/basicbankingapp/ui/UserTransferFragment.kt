@@ -103,9 +103,15 @@ class UserTransferFragment : Fragment() {
                 }
 
                 val userTransferMoneyInput = editTransactionSend.text.toString()
+                if(userTransferMoneyInput.isEmpty())
+                {
+                    Snackbar.make(binding.root, "Please Enter Send Amount", Snackbar.LENGTH_LONG).show()
+                   return@setOnClickListener
+                }
+
+
                 val isValid= isValidAmount(args.userTransferFrom.userCurrentBalance,userTransferMoneyInput.toDouble())
 
-                Log.d(TAG, "onViewCreated: $userTransferMoneyInput  //   $isValid")
 
                 if (userTransferMoneyInput.isNotEmpty() && userTransferMoneyInput != "0.0$" && isValid) {
 

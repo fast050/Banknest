@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="Totle Balance"
+            android:text="Total Balance"
             app:layout_constraintBottom_toTopOf="@+id/user_Amount"
             app:layout_constraintEnd_toEndOf="parent" />
 

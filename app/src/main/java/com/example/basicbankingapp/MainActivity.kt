@@ -19,14 +19,14 @@ import com.example.basicbankingapp.databinding.ActivityMainBinding
 import com.example.basicbankingapp.ui.UsersViewModel
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var navController: NavController
-    private val sharedViewModel by viewModels<UsersViewModel>{
-        UsersViewModel.UserViewModelFactory( (application as BankApplication).dao)
-    }
+    private val sharedViewModel by viewModels<UsersViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

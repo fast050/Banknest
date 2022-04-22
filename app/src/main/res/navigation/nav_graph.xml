@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/customerListFragment"
-        android:name="com.example.basicbankingapp.ui.ListCustomerFragment"
+        android:name="com.example.basicbankingapp.ui.customers.ListCustomerFragment"
         android:label="Bank Customers"
         tools:layout="@layout/fragment_list_customer">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/userDetailFragment"
-        android:name="com.example.basicbankingapp.ui.UserDetailFragment"
+        android:name="com.example.basicbankingapp.ui.detail.UserDetailFragment"
         android:label="Customer account"
         tools:layout="@layout/fragment_user_detail">
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/userTransferFragment"
-        android:name="com.example.basicbankingapp.ui.UserTransferFragment"
+        android:name="com.example.basicbankingapp.ui.trasnfers.UserTransferFragment"
         android:label="@string/transaction"
         tools:layout="@layout/fragment_user_transfer">
         <action
@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/successfullScreenFragment"
-        android:name="com.example.basicbankingapp.ui.SuccessfulScreenFragment"
+        android:name="com.example.basicbankingapp.ui.successful.SuccessfulScreenFragment"
         tools:layout="@layout/fragment_successfull_screen">
         <action
             app:enterAnim="@anim/from_right_aim"
@@ -62,7 +62,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.basicbankingapp.ui.HomeFragment"
+        android:name="com.example.basicbankingapp.ui.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home">
         <action

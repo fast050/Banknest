@@ -1,4 +1,4 @@
-package com.example.basicbankingapp.ui
+package com.example.basicbankingapp.ui.successful
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,19 +8,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.example.basicbankingapp.BankApplication
 import com.example.basicbankingapp.R
+import com.example.basicbankingapp.ui.UsersViewModel
 import com.google.android.material.appbar.AppBarLayout
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 
+@AndroidEntryPoint
 class SuccessfulScreenFragment : Fragment() {
 
 
-    private val sharedViewModel :UsersViewModel by activityViewModels {
-        UsersViewModel.UserViewModelFactory((requireActivity().application as BankApplication).dao)
-    }
+    private val sharedViewModel : UsersViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

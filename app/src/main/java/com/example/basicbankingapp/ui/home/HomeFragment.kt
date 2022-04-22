@@ -1,4 +1,4 @@
-package com.example.basicbankingapp.ui
+package com.example.basicbankingapp.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,9 +13,11 @@ import com.example.basicbankingapp.R
 import com.example.basicbankingapp.adapter.UsersAdapter
 import com.example.basicbankingapp.databinding.FragmentHomeBinding
 import com.example.basicbankingapp.ui.UsersViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding:FragmentHomeBinding? =null
@@ -25,7 +27,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater,container,false)
 
         return binding.root

@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:transitionName="child_support"
-        tools:context=".ui.UserDetailFragment">
+        tools:context=".ui.detail.UserDetailFragment">
         <!-- Rectangle 1 -->
         <View
             android:id="@+id/rectangle_1"

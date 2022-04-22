@@ -7,17 +7,18 @@
 
      <variable
          name="userTransferFragment"
-         type="com.example.basicbankingapp.ui.UserTransferFragment" />
+         type="com.example.basicbankingapp.ui.trasnfers.UserTransferFragment" />
     </data>
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_UserTrasnfer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:transitionName="hero_image"
-        tools:context=".ui.UserTransferFragment">
+        tools:context=".ui.trasnfers.UserTransferFragment">
 
 
         <com.google.android.material.appbar.AppBarLayout

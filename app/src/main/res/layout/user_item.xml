@@ -12,9 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        >
+        android:layout_height="wrap_content">
 
 
         <TextView
@@ -25,6 +23,8 @@
             android:layout_marginStart="8dp"
             android:text="TextView"
             app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/user_Image"
             app:layout_constraintTop_toTopOf="@+id/user_Image" />
 
@@ -33,21 +33,26 @@
             style="@style/Banknest.TextAppearance.subTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
             android:text="$ 100.00"
-
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/user_Email"
-            app:layout_constraintStart_toStartOf="@+id/textView10" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/user_Email" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/user_Image"
             android:layout_width="@dimen/image_profile_mid_width"
             android:layout_height="@dimen/image_profile_mid_height"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
             android:layout_marginTop="16dp"
             android:scaleType="centerCrop"
             android:src="@drawable/female_1"
             app:civ_border_color="#ffffffff"
             app:civ_border_width="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/user_Name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
@@ -57,9 +62,13 @@
             style="@style/Banknest.TextAppearance.body.small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:text="Email"
-            app:layout_constraintStart_toStartOf="@+id/user_Image"
+            app:layout_constraintEnd_toStartOf="@+id/textView10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/user_Image" />
 
         <TextView
@@ -69,7 +78,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="khalidwork050@gmail.com"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/user_Amount"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -78,10 +90,12 @@
             style="@style/Banknest.TextAppearance.body.small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="@dimen/_16sdp"
             android:text="Total Balance"
             app:layout_constraintBottom_toTopOf="@+id/user_Amount"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

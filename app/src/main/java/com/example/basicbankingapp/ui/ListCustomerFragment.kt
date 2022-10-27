@@ -42,11 +42,15 @@ class ListCustomerFragment : Fragment() {
     }
 
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+        requireActivity().window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
+
 
         _binding = FragmentListCustomerBinding.inflate(inflater, container, false)
         //for animations

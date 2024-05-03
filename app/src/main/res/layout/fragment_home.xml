@@ -88,88 +88,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardItem_1"
+                <androidx.compose.ui.platform.ComposeView
+                    android:id="@+id/compose_view"
                     android:layout_width="@dimen/_250sdp"
-
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:padding="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"
-                            android:src="@drawable/ic_comment"
-                            app:tint="@color/receive_money" />
-
-                        <TextView
-                            style="@style/Banknest.TextAppearance.body"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginBottom="16dp"
-                            android:text="@string/bank_feedback_user1"
-                             />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginBottom="16dp"
-                            android:background="?attr/dividerHorizontal" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:layout_width="@dimen/image_profile_width"
-                                android:layout_height="@dimen/image_profile_height"
-                                android:layout_marginStart="16dp"
-                                android:layout_marginBottom="16dp"
-                                android:src="@drawable/male_6" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    style="@style/Banknest.TextAppearance.body"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="35dp"
-                                    android:layout_marginStart="16dp"
-                                    android:text="@string/bank_name_user1"
-                                     />
-
-
-                            </LinearLayout>
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.compose.ui.platform.ComposeView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="@dimen/_250sdp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:padding="16dp"
-                    app:layout_constraintStart_toEndOf="@id/cardItem_2"
+                    app:layout_constraintStart_toEndOf="@id/compose_view"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <LinearLayout

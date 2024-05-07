@@ -2,18 +2,16 @@ package com.example.basicbankingapp.ui.homeUI
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedCard
@@ -33,15 +31,14 @@ import com.example.basicbankingapp.model.Testimony
 
 @Composable
 fun TestimonyItem(
-    testimony :Testimony,
+    testimony: Testimony,
     modifier: Modifier = Modifier
 ) {
-    OutlinedCard (
-        modifier = Modifier.wrapContentSize()
+    OutlinedCard(
+        modifier = Modifier
     ) {
         Column(
             modifier = Modifier
-                .fillMaxSize()
                 .width(300.dp)
                 .padding(20.dp)
         ) {
@@ -79,14 +76,20 @@ fun TestimonyItem(
 
 @Composable
 fun TestimoniesList() {
-    Row(Modifier.horizontalScroll(rememberScrollState())) {
+    Row(
+        modifier = Modifier
+            .horizontalScroll(rememberScrollState())
+            .padding(start = 8.dp, end = 8.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
         DataProvider.listOfComment.forEach {
             TestimonyItem(testimony = it)
         }
     }
 
 }
-@Preview(widthDp = 300, heightDp = 500, showSystemUi = true)
+
+@Preview(widthDp = 500, heightDp = 500, showSystemUi = true)
 @Composable
 private fun PreviewCustomItem() {
     TestimoniesList()

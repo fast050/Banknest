@@ -17,6 +17,7 @@ import com.example.basicbankingapp.data.DataProvider
 import com.example.basicbankingapp.databinding.FragmentHomeBinding
 import com.example.basicbankingapp.model.Testimony
 import com.example.basicbankingapp.ui.UsersViewModel
+import com.example.basicbankingapp.ui.homeUI.TestimoniesList
 import com.example.basicbankingapp.ui.homeUI.TestimonyItem
 import kotlinx.coroutines.launch
 
@@ -35,7 +36,7 @@ class HomeFragment : Fragment() {
         binding.composeView?.apply {
             setContent {
                 // In Compose world
-                TestimonyItem(testimony = DataProvider.listOfComment[0])
+                TestimoniesList()
             }
         }
         return binding.root

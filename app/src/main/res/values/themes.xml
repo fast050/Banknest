@@ -92,7 +92,6 @@
         <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
     </style>
 
-    Banknest.TextAppearance.subTitle.white
     <style name="Banknest.TextAppearance.subTitle.white" parent="Banknest">
         <item name="android:fontFamily">@font/montserrat_alternates_semibold</item>
         <item name="theme">@style/Theme.Material3.Dark</item>

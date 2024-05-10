@@ -1,6 +1,7 @@
 package com.example.basicbankingapp.data
 
 import com.example.basicbankingapp.R
+import com.example.basicbankingapp.model.Testimony
 import com.example.basicbankingapp.model.User
 
 
@@ -70,6 +71,29 @@ object DataProvider {
 
     val listOfCostumer = listOf(
         user1, user2, user3, user4, user5, user6, user7, user8, user9, user10
+    )
+
+
+    private val Testimony1 = Testimony(
+        userNameRes = R.string.bank_name_user1 ,
+        userImageRes = R.drawable.male_6,
+        userCommentRes = R.string.bank_feedback_user1
+    )
+
+    private val Testimony2 = Testimony(
+        userNameRes = R.string.bank_name_user2 ,
+        userImageRes = R.drawable.male_2,
+        userCommentRes = R.string.bank_feedback_user2
+    )
+
+    private val Testimony3 = Testimony(
+        userNameRes = R.string.bank_name_user3 ,
+        userImageRes = R.drawable.male_3,
+        userCommentRes = R.string.bank_feedback_user3
+    )
+
+    val listOfComment = listOf(
+      Testimony1 , Testimony2 , Testimony3
     )
 
 }

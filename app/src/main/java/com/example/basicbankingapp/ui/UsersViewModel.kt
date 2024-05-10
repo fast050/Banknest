@@ -52,7 +52,7 @@ class UsersViewModel(private val userDao: UserDao) : ViewModel() {
 
 
     class UserViewModelFactory(private val dao: UserDao) : ViewModelProvider.Factory {
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(UsersViewModel::class.java)) {
                 return UsersViewModel(dao) as T
             } else

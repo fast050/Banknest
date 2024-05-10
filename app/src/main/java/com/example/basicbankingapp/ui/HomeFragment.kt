@@ -5,47 +5,37 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
+import androidx.compose.ui.platform.ComposeView
 import androidx.navigation.fragment.findNavController
 import com.example.basicbankingapp.R
-import com.example.basicbankingapp.adapter.UsersAdapter
-import com.example.basicbankingapp.databinding.FragmentHomeBinding
-import com.example.basicbankingapp.ui.UsersViewModel
-import kotlinx.coroutines.launch
+import com.example.basicbankingapp.ui.homeUI.ComposeBanknessAppTheme
+import com.example.basicbankingapp.ui.homeUI.HomePage
 
 
 class HomeFragment : Fragment() {
 
-    private var _binding:FragmentHomeBinding? =null
-    private val binding get() = _binding!!
-
+    private lateinit var composeView: ComposeView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentHomeBinding.inflate(inflater,container,false)
-
-        return binding.root
+    ): View {
+        return ComposeView(requireContext()).also {
+            composeView = it
+        }
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.button3.setOnClickListener {
-
-
-           findNavController().navigate(R.id.action_homeFragment_to_customerListFragment3)
-
+        composeView.setContent {
+            // In Compose world
+            ComposeBanknessAppTheme {
+                HomePage {
+                    findNavController().navigate(R.id.action_homeFragment_to_customerListFragment3)
+                }
+            }
         }
-    }
-
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding=null
     }
 }

@@ -24,7 +24,6 @@ import com.example.basicbankingapp.R
 import com.example.basicbankingapp.adapter.UsersAdapter
 import com.example.basicbankingapp.data.DataProvider
 import com.example.basicbankingapp.data.UserDao
-import com.example.basicbankingapp.databinding.FragmentHomeBinding
 import com.example.basicbankingapp.databinding.FragmentListCustomerBinding
 import com.example.basicbankingapp.databinding.UserItemBinding
 import com.example.basicbankingapp.model.Transfers

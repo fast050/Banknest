@@ -14,6 +14,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -49,7 +50,8 @@ fun TestimonyItem(
             )
             Spacer(modifier = Modifier.size(20.dp))
             Text(
-                text = stringResource(id = testimony.userCommentRes)
+                text = stringResource(id = testimony.userCommentRes),
+                style = MaterialTheme.typography.bodyLarge
             )
             Spacer(modifier = Modifier.size(20.dp))
             HorizontalDivider(
@@ -67,7 +69,11 @@ fun TestimonyItem(
                         .clip(CircleShape)
                 )
                 Spacer(modifier = Modifier.size(16.dp))
-                Text(text = stringResource(id = testimony.userNameRes))
+                Text(
+                    text = stringResource(id = testimony.userNameRes),
+                    style = MaterialTheme.typography.bodyLarge
+                )
+
             }
         }
     }
@@ -75,9 +81,9 @@ fun TestimonyItem(
 }
 
 @Composable
-fun TestimoniesList() {
+fun TestimoniesList(modifier: Modifier = Modifier) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .horizontalScroll(rememberScrollState())
             .padding(start = 8.dp, end = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -86,13 +92,14 @@ fun TestimoniesList() {
             TestimonyItem(testimony = it)
         }
     }
-
 }
 
 @Preview(widthDp = 500, heightDp = 500, showSystemUi = true)
 @Composable
 private fun PreviewCustomItem() {
-    TestimoniesList()
+    ComposeBanknessAppTheme {
+        TestimoniesList()
+    }
 }
 
 

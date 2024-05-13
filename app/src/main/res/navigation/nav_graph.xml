@@ -64,7 +64,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.basicbankingapp.ui.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/review_home_page">
         <action
             android:id="@+id/action_homeFragment_to_customerListFragment3"
             app:destination="@id/customerListFragment"

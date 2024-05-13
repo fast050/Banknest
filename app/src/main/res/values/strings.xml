@@ -26,4 +26,7 @@
     <string name="show_all_customer_btn">Show All Customer</string>
     <string name="remove_number"><![CDATA[<]]></string>
 
+    <string name="email_label">Email</string>
+    <string name="total_balance_label">Total Balance</string>
+
 </resources>

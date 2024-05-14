@@ -1,13 +1,17 @@
 package com.example.basicbankingapp.ui.listCustomerUI
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -16,6 +20,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -30,10 +36,16 @@ import com.example.basicbankingapp.model.User
 import com.example.basicbankingapp.ui.formatMoneyAmount
 import com.example.basicbankingapp.ui.Theme.ComposeBanknessAppTheme
 import com.example.basicbankingapp.ui.Theme.getGray
+import com.example.basicbankingapp.ui.UsersViewModel
 
 @Composable
-fun BankCustomer(modifier: Modifier = Modifier, customer: User) {
-    Card(modifier = modifier.padding(bottom = 20.dp)) {
+fun BankCustomer(modifier: Modifier = Modifier, customer: User, onClick: (User) -> Unit) {
+    Card(
+        modifier = modifier
+            .clickable {
+                onClick(customer)
+            },
+    ) {
         Column(modifier = Modifier.padding(20.dp)) {
             Row {
                 Image(
@@ -80,18 +92,45 @@ fun BankCustomer(modifier: Modifier = Modifier, customer: User) {
                     )
                 }
             }
-
-
         }
     }
 }
 
+//stateful : use from fragment or ui
+@Composable
+fun BankCustomersList(
+    modifier: Modifier = Modifier,
+    shareViewModel: UsersViewModel,
+    onClick: (User) -> Unit
+) {
+    val customers by shareViewModel.users.observeAsState()
+    customers?.let { list->
+        BankCustomerList(list, onClick)
+    }
+}
+
+// stateless : use for Preview , reusable
+@Composable
+private fun BankCustomerList(
+    list: List<User>,
+    onClick: (User) -> Unit
+) {
+    LazyColumn(
+        contentPadding = PaddingValues(vertical = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        items(list) {
+            BankCustomer(customer = it, onClick = onClick)
+        }
+    }
+}
 
 
 @Preview
 @Composable
 private fun PreviewBankCustomer() {
     ComposeBanknessAppTheme {
-        BankCustomer(customer = DataProvider.listOfCostumer[0])
+        BankCustomerList(list = DataProvider.listOfCostumer) {
+        }
     }
 }

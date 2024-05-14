@@ -14,14 +14,14 @@ import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.basicbankingapp.R
-import com.example.basicbankingapp.databinding.UserItemBinding
+import com.example.basicbankingapp.databinding.UserItemBinding 
 import com.example.basicbankingapp.model.User
 import com.example.basicbankingapp.ui.Theme.ComposeBanknessAppTheme
 import com.example.basicbankingapp.ui.formatMoneyAmount
 import com.example.basicbankingapp.ui.listCustomerUI.BankCustomer
 
 
-class UsersAdapter(private val onClickListener: (User, CardView) -> Unit) :
+class UsersAdapter(private val onClickListener: (User) -> Unit) :
     RecyclerView.Adapter<UsersAdapter.UserViewHolder>() {
 
     private val mutableList: MutableList<User> = mutableListOf()
@@ -53,7 +53,7 @@ class UsersAdapter(private val onClickListener: (User, CardView) -> Unit) :
         fun bind(user: User) {
             composeView.setContent {
                 ComposeBanknessAppTheme {
-                    BankCustomer(customer = user)
+                    BankCustomer(customer = user){ user-> onClickListener(user)}
                 }
             }
         }

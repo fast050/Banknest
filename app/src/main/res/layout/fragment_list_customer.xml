@@ -9,13 +9,11 @@
     tools:context=".ui.ListCustomerFragment">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/customers_recycle_view"
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/customerList_compose"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/user_item"
-        />
+        tools:composableName="com.example.basicbankingapp.ui.listCustomerUI.CustomersKt.Customers"/>
 
 
 </LinearLayout>

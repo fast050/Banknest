@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import com.example.basicbankingapp.R
 import com.example.basicbankingapp.data.DataProvider
 import com.example.basicbankingapp.model.Testimony
+import com.example.basicbankingapp.ui.Theme.ComposeBanknessAppTheme
 
 @Composable
 fun TestimonyItem(

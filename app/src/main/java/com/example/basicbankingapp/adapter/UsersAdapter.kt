@@ -9,58 +9,54 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.compose.ui.platform.ComposeView
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.basicbankingapp.R
-import com.example.basicbankingapp.databinding.UserItemBinding
+import com.example.basicbankingapp.databinding.UserItemBinding 
 import com.example.basicbankingapp.model.User
+import com.example.basicbankingapp.ui.Theme.ComposeBanknessAppTheme
 import com.example.basicbankingapp.ui.formatMoneyAmount
+import com.example.basicbankingapp.ui.listCustomerUI.BankCustomer
 
 
-class UsersAdapter(private val onClickListener: (User,CardView)->Unit) : ListAdapter<User, UsersAdapter.UserViewHolder>(UserDiffCallBack()) {
+class UsersAdapter(private val onClickListener: (User) -> Unit) :
+    RecyclerView.Adapter<UsersAdapter.UserViewHolder>() {
 
+    private val mutableList: MutableList<User> = mutableListOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        val binding = UserItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return UserViewHolder(binding)
+        return UserViewHolder(ComposeView(parent.context))
+    }
 
+    override fun getItemCount(): Int {
+        return mutableList.size
+    }
+
+    fun submitList(list: List<User>) {
+        mutableList.clear()
+        mutableList.addAll(list)
+
+        notifyItemChanged(0, list.size)
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        val user = getItem(position)
-        holder.bind(user)
+        if (mutableList.getOrNull(position) != null) {
+            val user = mutableList.get(index = position)
+            holder.bind(user)
+        }
     }
 
+    inner class UserViewHolder(private val composeView: ComposeView) :
+        RecyclerView.ViewHolder(composeView) {
 
-   inner class UserViewHolder(private val binding: UserItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-       fun bind(user: User) {
-            binding.apply {
-                userName.text = user.userName
-                userAmount.text = user.userCurrentBalance.formatMoneyAmount()
-                userEmail.text=user.userEmail
-                userImage.setImageResource(user.userProfilePicture)
-
-
-                userItemContainer.transitionName = user.userId.toString()
-
-                binding.root.setOnClickListener {
-                    onClickListener(user,userItemContainer)
+        fun bind(user: User) {
+            composeView.setContent {
+                ComposeBanknessAppTheme {
+                    BankCustomer(customer = user){ user-> onClickListener(user)}
                 }
-
             }
         }
-
-
-    }
-
-    private class UserDiffCallBack : DiffUtil.ItemCallback<User>() {
-        override fun areItemsTheSame(oldItem: User, newItem: User): Boolean =
-            oldItem.userId == newItem.userId
-
-        override fun areContentsTheSame(oldItem: User, newItem: User): Boolean =
-            oldItem == newItem
     }
 
 }

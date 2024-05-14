@@ -23,6 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.basicbankingapp.R
+import com.example.basicbankingapp.ui.Theme.ComposeBanknessAppTheme
 
 
 @Composable

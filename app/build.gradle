@@ -8,22 +8,16 @@ plugins {
 
 android {
 
-    sourceSets {
-        main {
-            java {
-                srcDirs += 'build/generated/source/navigation-args'
-            }
-        }
-    }
+    namespace = "com.example.basicbankingapp"
 
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.basicbankingapp"
+        applicationId "com.basicbankingapp"
         minSdk 21
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 11
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -35,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     buildFeatures{
@@ -48,22 +42,22 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
+        kotlinCompilerExtensionVersion = "1.5.14"
     }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.13.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'
     implementation 'androidx.navigation:navigation-ui-ktx:2.7.7'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
     def room_version = "2.4.1" // check latest version from docs
 
@@ -74,7 +68,7 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
 
-    def composeBom = platform('androidx.compose:compose-bom:2024.04.01')
+    def composeBom = platform('androidx.compose:compose-bom:2024.06.00')
     implementation composeBom
     androidTestImplementation composeBom
 
@@ -85,11 +79,11 @@ dependencies {
 
 
     // Android Studio Preview support
-    debugImplementation "androidx.compose.ui:ui-tooling:1.6.7"
-    implementation "androidx.compose.ui:ui-tooling-preview:1.6.7"
+    debugImplementation "androidx.compose.ui:ui-tooling:1.6.8"
+    implementation "androidx.compose.ui:ui-tooling-preview:1.6.8"
 
     // Optional - Integration with ViewModels
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3'
     // Optional - Integration with LiveData
     implementation 'androidx.compose.runtime:runtime-livedata'
 

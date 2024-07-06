@@ -45,7 +45,7 @@ class SuccessfulScreenFragment : Fragment() {
 
         lifecycleScope.launch{
             delay(3000)
-            findNavController().navigate(R.id.action_successfullScreenFragment_to_customerListFragment)
+            findNavController().navigate(R.id.action_successfullScreenFragment_to_homeFragment)
         }
 
         sharedViewModel.setUserSelected(null)

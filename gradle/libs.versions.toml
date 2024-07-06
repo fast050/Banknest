@@ -1,0 +1,22 @@
+[versions]
+kotlinGradlePlugin = "2.0.0"
+ktx = "1.13.1"
+kotlin = "2.0.0"
+navigationCompose = "2.8.0-beta04"
+navigationSafeArgsGradlePlugin = "2.7.7"
+serialization = "1.7.1"
+gradle = "7.0.4"
+
+[libraries]
+androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
+gradle-tools = { module = "com.android.tools.build:gradle" , version.ref = "gradle"}
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin" , version.ref = "kotlin"}
+navgiation-safe-args = { module = "androidx.navigation:navigation-safe-args-gradle-plugin" , version.ref = "navigationSafeArgsGradlePlugin"}
+
+[plugins]
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+

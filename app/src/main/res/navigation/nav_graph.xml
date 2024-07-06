@@ -6,15 +6,6 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/customerListFragment"
-        android:name="com.example.basicbankingapp.ui.ListCustomerFragment"
-        android:label="Bank Customers"
-        tools:layout="@layout/fragment_list_customer">
-        <action
-            android:id="@+id/action_customerListFragment_to_userDetailFragment3"
-            app:destination="@id/userDetailFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/userDetailFragment"
         android:name="com.example.basicbankingapp.ui.UserDetailFragment"
         android:label="Customer account"
@@ -51,14 +42,8 @@
         android:name="com.example.basicbankingapp.ui.SuccessfulScreenFragment"
         tools:layout="@layout/fragment_successfull_screen">
         <action
-            app:enterAnim="@anim/from_right_aim"
-            app:exitAnim="@anim/from_left_aim"
-            app:popEnterAnim="@anim/to_left_aim"
-            app:popExitAnim="@anim/to_right_aim"
-            android:id="@+id/action_successfullScreenFragment_to_customerListFragment"
-            app:destination="@id/customerListFragment"
-            app:popUpTo="@id/customerListFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_successfullScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -66,11 +51,7 @@
         android:label="Home"
         tools:layout="@layout/review_home_page">
         <action
-            android:id="@+id/action_homeFragment_to_customerListFragment3"
-            app:destination="@id/customerListFragment"
-            app:enterAnim="@anim/from_right_aim"
-            app:exitAnim="@anim/from_left_aim"
-            app:popEnterAnim="@anim/to_left_aim"
-            app:popExitAnim="@anim/to_right_aim" />
+            android:id="@+id/action_homeFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
     </fragment>
 </navigation>
